@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRO-FINCA</title>
+  <link rel="stylesheet" href="css\styles.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+  </style>
+</head>
+
+<body>
+    <header class="extra-tall-header" style="position: fixed; top: 0; left: 0; right: 0; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <div class="logo" style="display: flex; align-items: center; padding: 10px;">
+            <img class="logo-img" src="img/loging.png" alt="" style="width: 50px; height: 50px; margin-right: 10px;">
+            <h2 style="margin: 0; font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">AGRO-FINCA</h2>
+        </div>
+
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Buscar productos...">
+          <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+    
+        
+        <main>
+          <div class="profile-container">
+            <div class="profile">
+              <a href="history.html">
+                <i class="fas fa-user-circle"></i>
+              </a>
+            </div>
+          </div>
+        </main>
+          
+    
+    
+        <div class="cart-top" style="padding: 10px;">
+          <button onclick="window.location.href = 'carrocompras.html'" style="background-color: #007bff; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+              <i class="fas fa-shopping-cart" style="margin-right: 5px;"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+            <div class="cart-dropdown" id="cart-dropdown" style="position: absolute; top: 60px; right: 10px; background-color: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 10px; display: none;">
+                <h3 style="margin-top: 0; font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Shopping Cart</h3>
+                <ul id="cart-items"></ul>
+            </div>
+        </div>
+    
+    </header>
+
+    <nav class="navbar" style="display: flex; align-items: center;">
+    
+      <div class="nav-item">
+          <a class="nav-link" href="#" style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Alimentos</a>
+      </div>
+      <div class="nav-item">
+          <a class="nav-link"  href="fertilizantes.html" href="#" style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Fertilizantes</a>
+      </div>
+      <div class="nav-item">
+          <a class="nav-link" href="Herramientas.html" href="#" style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Herramientas de Campo</a>
+      </div>
+     
+      <nav>
+        <div class="logo">
+          
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><span>&#xE5D2;</span></label>
+        <ul class="menu">
+          <li><a href="#"><i class="fas fa-apple-alt"></i> Frutas</a></li>
+          <li><a href="#"><i class="fas fa-carrot"></i> Verduras</a></li>
+          <li><a href="#"><i class="fas fa-leaf"></i> Hortalizas</a></li>
+          <li><a href="#"><i class="fas fa-tools"></i> Guadañas</a></li>
+          <li><a href="#"><i class="fas fa-chainsaw"></i> Motosierras</a></li>
+          <li><a href="#"><i class="fas fa-excavator"></i> Excavadoras</a></li>
+          <li><a href="#"><i class="fas fa-spray-can"></i> Fumigadoras</a></li>
+          <li><a href="#"><i class="fas fa-tree-pruning"></i> Podadoras</a></li>
+          <li><a href="#"><i class="fas fa-seedling"></i> Herbicidas</a></li>
+          <li><a href="#"><i class="fas fa-bug"></i> Fungicidas</a></li>
+          <li><a href="#"><i class="fas fa-seedling"></i> Fertilizantes</a></li>
+        </ul>
+      </nav>
+      
+      
+    </nav>
+
+
+    
+<!-- Cart Dropdown -->
+<div class="cart-dropdown" id="cart-dropdown">
+    <h3>Shopping Cart</h3>
+    <ul id="cart-items"></ul>
+</div>
+
+  <!-- Header -->
+
+  <!-- Productos -->
+  <div class="card-container"style="margin-top: 130px;">
+    <div class="grid-item" onclick="showProductDetails('producto.html?producto=maiz')">
+        <img src="img/maiz.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Maíz $4000kg</p>
+            <button onclick="addToCart('Maíz')">+</button>
+        </div>
+    </div>
+    
+    
+    <div class="grid-item" onclick="showProductDetails('producto.html?producto=frijol')">
+        <img src="img/frijol.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Frijol</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    
+    </div>
+    <div class="grid-item" onclick="showProductDetails('producto.html?producto=tomate')">
+        
+        <img src="img/tomate1.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Tomate</p>
+            <button onclick="addToCart('Tomate')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="img/naranja.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Naranja</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    
+    <div class="grid-item">
+        
+        <img src="img/limon.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Limon</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+       
+        <img src="img/yuca.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Yuca</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        
+        <img src="img/papa.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Papa</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+       
+        <img src="img/papaya.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Papaya</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        
+        <img src="img/platanos.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Platanos</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Agregar más productos -->
+        <img src="img/aguacate.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Aguacate</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+       
+        <img src="img/cebolla.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Cebolla</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        
+        <img src="img/cebollalarga.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Cebolla larga</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        
+        <img src="img/cilantro.jpg" alt="" style="width: 248px; height: 204px;">
+        <div class="card-title">
+            <p>Cilantro</p>
+            <button onclick="addToCart('Frijol')">+</button>
+        </div>
+    </div>
+</div>
+  <!-- fin-->
+
+  <!-- Productos informacion -->
+  <div id="product-info" style="display: none;">
+    <p id="product-name"></p>
+    <p>Precio: $<span id="product-price"></span></p>
+    <p>Cantidad disponible: <span id="product-quantity"></span></p>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Contacto</h3>
+        <p>Puedes contactarnos a través de:</p>
+        <ul>
+          <li><i class="fas fa-envelope"></i> albert9419@hotmail.com</li>
+          <li><i class="fas fa-phone"></i> +573234866077</li>
+          <li><i class="fas fa-map-marker-alt"></i> Dirección, Ciudad, País</li>
+        </ul>
+      </div>
+      <div class="footer-section links">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="todosproductos.html">Productos</a></li>
+          <li><a href="nosotros.html">Acerca de nosotros</a></li>
+    
+        </ul>
+      </div>
+      <div class="footer-section contact-form">
+        <h3>Enviar Comentarios</h3>
+        <form action="#" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Correo">
+          <textarea rows="4" name="message" class="text-input contact-input" placeholder="Mensaje"></textarea>
+          <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 AGRO-FINCA | Todos los derechos reservados
+    </div>
+  </footer>
+
+  <!-- Script JavaScript -->
+  <script>
+
+    // Array para almacenar los elementos del carrito
+    let cartItems = [];
+
+    //funcion para mostrar producto
+    //function addToCart(producto) {
+          //alert("Añadido al carrito: " + producto);
+          // Aquí podrías agregar la lógica para añadir el producto al carrito
+      //}
+
+      function showProductDetails(url) {
+          window.location.href = url; // Redirige a la página del producto
+      }
+      
+
+    const showProductInfo = (name, price, quantity) => {
+      const productName = document.getElementById('product-name');
+      const productPrice = document.getElementById('product-price');
+      const productQuantity = document.getElementById('product-quantity');
+
+      productName.textContent = name;
+      productPrice.textContent = price;
+      productQuantity.textContent = quantity;
+
+      // Mostrar el div con la información del producto
+      const productInfo = document.getElementById('product-info');
+      productInfo.style.display = 'block';
+    };
+
+    const hideProductInfo = () => {
+      const productInfo = document.getElementById('product-info');
+      productInfo.style.display = 'none';
+    };
+
+    const addToCart = (productName) => {
+      cartItems.push(productName);
+      updateCart();
+      showCartItemInfo(productName);
+    };
+
+    const updateCart = () => {
+      const cartList = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
+      cartList.innerHTML = '';
+
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        cartList.appendChild(li);
+      });
+
+      cartCount.textContent = cartItems.length;
+    };
+
+    const showCartItemInfo = (productName) => {
+      const cartContainer = document.getElementById('open');
+      const itemInfo = document.createElement('div');
+      itemInfo.innerHTML = `
+        <p><strong>Producto:</strong> ${productName}</p>
+      `;
+      cartContainer.appendChild(itemInfo);
+    };
+
+    const toggleMenu = () => {
+      const cartDropdown = document.getElementById('cart-dropdown');
+      const body = document.body;
+
+      if (window.innerWidth <= 768) {
+        cartDropdown.style.transition = 'opacity 0.3s ease-in-out';
+        body.classList.toggle('open');
+
+        if (body.classList.contains('open')) {
+          setTimeout(() => {
+            cartDropdown.style.opacity = '1';
+          }, 15);
+        } else {
+          cartDropdown.style.opacity = '0';
+        }
+      }
+    };
+
+
+    // JavaScript para alternar el menú de respuesta
+  const toggleBtn = document.getElementById('toggle-menu');
+  const menuBox = document.querySelector('.menu-box');
+
+  toggleBtn.addEventListener('change', function() {
+    if (this.checked) {
+      menuBox.style.display = 'block';
+    } else {
+      menuBox.style.display = 'none';
+    }
+  });
+
+  
+  </script>
+  <!-- Fin del script JavaScript -->
+
+</body>
+</html>

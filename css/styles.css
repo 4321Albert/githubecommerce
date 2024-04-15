@@ -1,0 +1,633 @@
+/* CSS para mejorar el diseño */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .navbar {
+    display: flex;
+  }
+  .nav-item {
+    margin-right: 20px;
+    border-radius: 80px;
+    background-color: #fcfafa;
+    padding: 10px 20px;
+  }
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .title {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .title h2 {
+    margin-bottom: 5px;
+    color: #333333;
+  }
+  .title img {
+    width: 100px;
+    height: auto;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  .card-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .card-title p {
+    margin: 0;
+    color: #333333;
+  }
+  .card-title button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .cart-top {
+    position: relative;
+  }
+  .cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .cart-dropdown h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  .cart-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cart-dropdown ul li {
+    margin-bottom: 5px;
+    color: #333333;
+  }
+  .menu-mobile,
+  .menu-desktop {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .menu-mobile {
+      display: block;
+    }
+    .menu-desktop {
+      display: none;
+    }
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+    .nav-item {
+      margin: 10px 0;
+    }
+    .cart-dropdown {
+      
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  /* Estilos para el pie de página */
+footer {
+
+background-color: #5189c9;
+color: #120f0f;
+padding: 50px 0;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer-section {
+padding: 20px;
+}
+
+.footer-section h3 {
+color: #100e0e;
+font-size: 1.5rem;
+margin-bottom: 15px;
+}
+
+.footer-section p {
+font-size: 1rem;
+margin-bottom: 10px;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+color: #030202;
+text-decoration: none;
+}
+
+.footer-bottom {
+background-color: #222222;
+color: #ffffff;
+text-align: center;
+padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para el header */
+.extra-tall-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Estilos para el logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Estilos para el carrito */
+.cart-top {
+  position: relative;
+}
+
+.cart-top button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-top button:hover {
+  background-color: #65a1e1;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+}
+
+.cart-dropdown h3 {
+  margin-top: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-count {
+  margin-right: 5px;
+}
+
+
+
+
+/* Estilos para el formulario */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para los campos de entrada de texto */
+.text-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilos específicos para el campo de entrada de correo electrónico */
+input[type="email"] {
+  width: 100%;
+}
+
+/* Estilos para el área de texto */
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilos para el botón */
+.btn {
+  padding: 10px 50px;
+  background-color: #94c4fb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b0f78a;
+}
+
+/* Estilos para el icono dentro del botón */
+.btn i {
+  margin-right: 5px;
+}
+/* Estilos generales */
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+header {
+background-color: #333;
+color: #fff;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo h2 {
+margin: 0;
+}
+
+nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+nav ul li {
+display: inline;
+margin-right: 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #fff;
+}
+
+nav ul li a:hover {
+text-decoration: underline;
+}
+
+
+
+
+
+/* Estilos del perfil */
+.profile-container {
+text-align: center;
+margin-top: 5px;
+}
+
+.profile {
+background-color: #f9fbfa;
+padding: 30px;
+border-radius: 30px;
+display: inline-block;
+}
+
+.profile i {
+font-size: 30px;
+color: #333;
+}
+
+.profile p {
+margin: 10px 0;
+}
+
+
+
+.profile a:hover {
+text-decoration: underline;
+}
+
+/*barra de categorias*/
+.navbar {
+display: flex;
+align-items: center;
+position: fixed;
+top: 90px; /* Ajusta la distancia desde la parte superior */
+left: 0;
+right: 0;
+background-color: #f14907; /* Cambia al color que desees */
+padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra si es necesario */
+z-index: 999; /* Asegura que el menú esté por encima de otros elementos */
+justify-content: center;
+
+}
+
+.nav-item {
+margin-right: 20px; /* Ajusta el espacio entre elementos */
+}
+/*barra busqueda*/
+.search-container {
+display: flex;
+align-items: center;
+margin-right: 20px;
+}
+
+#search-input {
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+width: 250px; /* Ajusta el ancho según sea necesario */
+}
+
+#search-button {
+background-color: #333;
+color: #fff;
+border: none;
+padding: 8px 12px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#search-button:hover {
+background-color: #555;
+}
+
+#search-button i {
+font-size: 18px;
+}
+
+
+
+/* menu ambuergesa */
+
+/* Estilos para el menú hamburguesa */
+nav {
+display: flex;
+align-items: center;
+}
+
+.logo img {
+width: 120px;
+height: auto;
+}
+
+.menu {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+padding: 2rem 0;
+margin: 0;
+background-color: #f7f7f7;
+z-index: 1;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.menu li {
+margin-bottom: 1.5rem;
+}
+
+.menu a {
+color: #333;
+font-size: 1.2rem;
+text-decoration: none;
+}
+
+.menu a:hover {
+color: #0077c0;
+}
+
+.menu-icon {
+display: block;
+cursor: pointer;
+width: 40px;
+height: 40px;
+position: relative;
+}
+
+#menu-toggle:checked + .menu-icon span {
+transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-icon span:before {
+transform: translate(-50%, -50%) rotate(-45deg);
+top: 0;
+}
+
+#menu-toggle:checked + .menu-icon span:after {
+transform: translate(-50%, -50%) rotate(45deg);
+top: 0;
+}
+
+#menu-toggle:checked ~ .menu {
+opacity: 1;
+visibility: visible;
+}
+
+/* Estilos para el ícono de menú hamburguesa de Google Fonts */
+.menu-icon span::before {
+content: "\2630"; /* Código Unicode para el ícono de las tres líneas */
+font-family: 'Material Icons'; /* Cambia 'Material Icons' por el nombre de la fuente de Google Fonts que deseas utilizar */
+font-size: 24px; /* Tamaño del ícono */
+}
+
+.menu-icon span::after,
+.menu-icon span {
+display: block;
+width: 25px;
+height: 3px;
+background-color: #333;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: transform 0.3s ease-in-out;
+}
+
+#menu-toggle:checked + .menu-icon span::before {
+display: none; /* Ocultar las tres líneas cuando se muestre la "X" */
+}
+
+/*productos detalles*/
+#product-details {
+    display: flex; /* Utilizar flexbox */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    border: 1px solid #fffdfd; /* Borde sólido con color gris claro */
+    padding: 20px; /* Espacio de relleno interno */
+    background-color: #ffffff; /* Color de fondo gris claro */
+}
+
+#product-details img {
+    flex: 0 0 auto; /* No cambiar el tamaño de la imagen */
+    margin-right: 20px; /* Margen derecho para separar la imagen del texto */
+}
+
+#product-details p {
+    flex: 1; /* Que el texto ocupe el espacio restante */
+}
+
+
+
+
+
+.containerrr {
+    width: 70%; /* Ajusta el ancho de la caja de media pantalla según sea necesario */
+    background-color: #ffffff; /* Color de fondo de la caja */
+    padding: 20px; /* Espacio interior de la caja */
+    border: 1px solid #ffffff; /* Borde de la caja */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra de la caja */
+}
+
+/*style formulario registro */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.derecha {
+  float: right;
+  width: 50%; /* Opcional: ajusta el ancho según sea necesario */
+}
+
+.productos {
+  clear: both; /* Limpiar el float */
+}
+.producto {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin: 5px;
+  float: right;
+}
+
+.producto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para ajustar la imagen dentro del div */
+}
+
+
+
+.cart-options {
+  margin-left: 20px; /* Espacio a la izquierda */
+}
+
+.add-to-cart-btn {
+  background-color: #0676bc; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Padding del botón */
+  border: none; /* Borde */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor al pasar */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2a86f7; /* Color de fondo al pasar */
+}
+
+.quantity-dropdown {
+  padding: 8px; /* Padding de la lista desplegable */
+  border-radius: 5px; /* Borde redondeado */
+}
+.product-price {
+  background-color: #f2f2f2; /* Color de fondo predeterminado */
+  padding: 5px 10px; /* Padding de la caja */
+  border-radius: 5px; /* Borde redondeado */
+  margin-bottom: 5px; /* Margen inferior */
+  background-color: #f35303; /* Cambio de color de fondo */
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register Form</title>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="css\styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+  
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="extra-tall-header" style="position: fixed; top: 0; left: 0; right: 0; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <div class="logo" style="display: flex; align-items: center; padding: 10px;">
+      <img class="logo-img" src="img/loging.png" alt="" style="width: 50px; height: 50px; margin-right: 10px;">
+      <h2 style="margin: 0; font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">AGRO-FINCA</h2>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar productos...">
+      <button id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="profile-container">
+      <div class="profile">
+        <a href="history.html">
+          <i class="fas fa-user-circle"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="cart-top" style="padding: 10px;">
+      <button onclick="window.location.href = 'carrocompras.html'" style="background-color: #007bff; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-shopping-cart" style="margin-right: 5px;"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+      <div class="cart-dropdown" id="cart-dropdown" style="position: absolute; top: 60px; right: 10px; background-color: #fff; border: 1px solid #ddd; border-radius: 5px; padding: 10px; display: none;">
+        <h3 style="margin-top: 0; font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Shopping Cart</h3>
+        <ul id="cart-items"></ul>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar" style="display: flex; align-items: center;">
+    <div class="nav-item">
+      <a class="nav-link" href="index.html" href="#" style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Alimentos</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="fertilizantes.html" href="#" style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Fertilizantes</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="Herramientas.html" href="#" style="font-family: 'Roboto', sans-serif; font-weight: bold; color: #333;">Herramientas de Campo</a>
+    </div>
+  </nav>
+
+  <div class="min-h-screen flex flex-col justify-between">
+    <div class="container mx-auto py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Formulario de inicio de sesión -->
+      <div class="bg-white p-8 rounded shadow-md" style="margin-top: 130px;">
+        <h2 class="text-xl font-semibold mb-6">Login</h2>
+        <form>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+            <input type="email" id="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+            <input type="password" id="password" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+          </div>
+          <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">Sign in</button>
+        </form>
+      </div>
+     
+      <!-- Formulario de registro -->
+      <div class="bg-white p-8 rounded shadow-md" style="margin-top: 130px;">
+        <h2 class="text-xl font-semibold mb-6">Regístrate</h2>
+        <p class="mb-4">PRIMERA VEZ EN AGRO-FINCA.COM</p>
+        <form>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="mb-4">
+              <label for="firstname" class="block text-sm font-medium text-gray-700">Nombres *</label>
+              <input type="text" id="firstname" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="lastname" class="block text-sm font-medium text-gray-700">Apellidos *</label>
+              <input type="text" id="lastname" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="documentType" class="block text-sm font-medium text-gray-700">Tipo de Documento *</label>
+              <select id="documentType" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                <option value="">Seleccionar...</option>
+                <!-- Agrega opciones según tus necesidades -->
+              </select>
+            </div>
+            <div class="mb-4">
+              <label for="documentNumber" class="block text-sm font-medium text-gray-700">Nro documento *</label>
+              <input type="text" id="documentNumber" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="region" class="block text-sm font-medium text-gray-700">Región *</label>
+              <input type="text" id="region" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="city" class="block text-sm font-medium text-gray-700">Ciudad *</label>
+              <input type="text" id="city" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="address" class="block text-sm font-medium text-gray-700">Dirección *</label>
+              <input type="text" id="address" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono *</label>
+              <input type="text" id="phone" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="cellphone" class="block text-sm font-medium text-gray-700">Celular *</label>
+              <input type="text" id="cellphone" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="registerEmail" class="block text-sm font-medium text-gray-700">E-Mail *</label>
+              <input type="email" id="registerEmail" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="registerPassword" class="block text-sm font-medium text-gray-700">Password *</label>
+              <input type="password" id="registerPassword" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <div class="mb-4">
+              <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirmar Password *</label>
+              <input type="password" id="confirmPassword" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">Registrarse</button>
+        </form>
+      </div>
+    </div>
+    </div>
+    <section class="bg-gray-200 py-8">
+        <div class="container mx-auto">
+          <div class="flex justify-center items-center space-x-8">
+            <img src="img/visa-logoo.png" alt="Visa" class="h-12">
+            
+          </div>
+        </div>
+      </section>
+    <footer class="class="footer-content"">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="footer-section">
+            <h3>Contacto</h3>
+            <p>Puedes contactarnos a través de:</p>
+            <ul>
+              <li><i class="fas fa-envelope"></i> albert9419@hotmail.com</li>
+              <li><i class="fas fa-phone"></i> +573234866077</li>
+              <li><i class="fas fa-map-marker-alt"></i> Dirección, Ciudad, País</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Enlaces</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="todosproductos.html">Productos</a></li>
+              <li><a href="nosotros.html">Acerca de nosotros</a></li>
+              
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Enviar Comentarios</h3>
+            <form action="#" method="post">
+              <input type="email" name="email" class="text-input contact-input mb-2" placeholder="Correo">
+              <textarea rows="4" name="message" class="text-input contact-input mb-2" placeholder="Mensaje"></textarea>
+              <button type="submit" class="btn bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">
+                <i class="fas fa-envelope"></i>
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        &copy; 2024 AGRO-FINCA | Todos los derechos reservados
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

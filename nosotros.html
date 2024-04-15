@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos adicionales para asegurarse de que el efecto de partículas esté en la capa inferior */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4">
+
+<div id="particles-js"></div> <!-- Este div será el contenedor para los efectos de partículas -->
+
+<div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md relative z-10"> <!-- Z-10 para asegurarse de que este div esté en capa superior -->
+    <h1 class="text-3xl font-bold mb-6 text-center">Conócenos</h1>
+
+    <div class="flex items-center justify-center mb-8">
+        <img src="img/loging.png" alt="Logo de la empresa" class="w-32 h-32 rounded-full">
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Historia 1 -->
+        <div class="bg-blue-100 p-6 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2">Nuestra Historia</h2>
+            <p class="text-gray-700">Desde nuestros humildes comienzos como una pequeña tienda local, hemos crecido hasta convertirnos en una de las principales empresas agrícolas de la región. Descubre cómo comenzamos y cuáles son nuestros valores fundamentales.</p>
+        </div>
+
+        <!-- Historia 2 -->
+        <div class="bg-green-100 p-6 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2">Nuestra Misión</h2>
+            <p class="text-gray-700">Nuestra misión es proporcionar a nuestros clientes productos agrícolas de alta calidad y servicios excepcionales que promuevan el éxito en la agricultura y la jardinería. Nos esforzamos por ser un socio confiable y de confianza para todos nuestros clientes.</p>
+        </div>
+    </div>
+
+    <div class="mt-8">
+        <h2 class="text-2xl font-semibold mb-4">Nuestro Equipo</h2>
+
+        <div class="flex items-center mb-4">
+            <img src="img/team.jpg" alt="Miembro del equipo 1" class="w-12 h-12 rounded-full mr-4">
+            <div>
+                <h3 class="text-lg font-semibold">Juan Pérez</h3>
+                <p class="text-gray-700">Gerente de Ventas</p>
+            </div>
+        </div>
+
+        <div class="flex items-center mb-4">
+            <img src="img/team2.jpg" alt="Miembro del equipo 2" class="w-12 h-12 rounded-full mr-4">
+            <div>
+                <h3 class="text-lg font-semibold">María Rodríguez</h3>
+                <p class="text-gray-700">Especialista en Agricultura</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script de Particles.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    /* Configuración de Particles.js */
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#000000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#000000",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
+
+</body>
+</html>
+
