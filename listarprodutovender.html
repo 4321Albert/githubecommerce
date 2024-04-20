@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Producto</title>
+    <!-- Incluir Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Publicar Producto</h1>
+        <form class="max-w-md mx-auto" action="#" method="POST">
+            <!-- Nombre del Producto -->
+            <div class="mb-4">
+                <label for="nombre" class="block text-sm font-semibold text-gray-600">Nombre del Producto</label>
+                <input type="text" id="nombre" name="nombre" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white" placeholder="Nombre del producto" required>
+            </div>
+            <!-- Descripción del Producto -->
+            <div class="mb-4">
+                <label for="descripcion" class="block text-sm font-semibold text-gray-600">Descripción del Producto</label>
+                <textarea id="descripcion" name="descripcion" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white" rows="4" placeholder="Descripción del producto" required></textarea>
+            </div>
+            <!-- Precio -->
+            <div class="mb-4">
+                <label for="precio" class="block text-sm font-semibold text-gray-600">Precio</label>
+                <input type="number" id="precio" name="precio" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white" placeholder="Precio del producto" required>
+            </div>
+            <!-- Imagen del Producto -->
+            <div class="mb-4">
+                <label for="imagen" class="block text-sm font-semibold text-gray-600">Imagen del Producto</label>
+                <input type="file" id="imagen" name="imagen" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white">
+            </div>
+            <!-- Nombre del Vendedor -->
+            <div class="mb-4">
+                <label for="vendedor" class="block text-sm font-semibold text-gray-600">Nombre del Vendedor</label>
+                <input type="text" id="vendedor" name="vendedor" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white" placeholder="Nombre del vendedor" required>
+            </div>
+            <!-- Datos de Contacto -->
+            <div class="mb-4">
+                <label for="contacto" class="block text-sm font-semibold text-gray-600">Datos de Contacto</label>
+                <textarea id="contacto" name="contacto" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white" rows="2" placeholder="Datos de contacto (correo electrónico, teléfono, etc.)" required></textarea>
+            </div>
+            <!-- Métodos de Pago -->
+            <div class="mb-4">
+                <label for="metodos_pago" class="block text-sm font-semibold text-gray-600">Métodos de Pago</label>
+                <select id="metodos_pago" name="metodos_pago" class="mt-1 px-4 py-2 block w-full rounded-md bg-gray-200 focus:outline-none focus:bg-white" required>
+                    <option value="" disabled selected>Seleccione un método de pago</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="transferencia">Transferencia Bancaria</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <!-- Botón Publicar -->
+            <div class="mb-4">
+                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Publicar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
